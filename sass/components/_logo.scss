@@ -1,0 +1,29 @@
+.logo {
+  color: $accent-color;
+  font-family: $secondary-font;
+  font-weight: $bold-font-weight;
+  @include font(24px, 28px);
+  text-decoration: none;
+
+  @media screen and (min-width: 1200px) {
+    @include font(26px, 31px);
+  }
+  &-dark {
+    color: $title-text-color;
+  }
+  &-white {
+    color: $white-color;
+  }
+  .header & {
+    @media screen and (min-width: 768px) {
+      margin-right: 88px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
+  }
+  .footer & {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}

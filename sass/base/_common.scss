@@ -1,0 +1,62 @@
+/* ====== common ====== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding-top: 60px;
+  @media screen and (min-width: 768px) {
+    padding-top: 80px;
+  }
+
+  background-color: $main-background-color;
+  color: $main-text-color;
+  font-family: $main-font;
+  letter-spacing: 0.03em;
+
+  min-width: 480px;
+  width: 100%;
+}
+body.modal-open {
+  overflow: hidden;
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+.address,
+.contact {
+  font-style: normal;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.important {
+  display: block;
+  font-weight: $bold-font-weight;
+  @include font(14px, 16px);
+  text-transform: uppercase;
+  color: $white-color;
+
+  .footer & {
+    margin-bottom: 20px;
+  }
+}
+.section {
+  padding: 60px 0; //mobile, tablet
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0; //desctop
+  }
+}
+.subscribe-wrapper {
+  display: block;
+  margin: 0px auto;
+}

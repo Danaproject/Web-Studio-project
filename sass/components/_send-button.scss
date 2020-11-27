@@ -1,0 +1,19 @@
+.send-button {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  background: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  font-weight: $bold-font-weight;
+  @include font(16px, 30px);
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: $white-color;
+}

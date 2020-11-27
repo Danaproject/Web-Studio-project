@@ -1,0 +1,104 @@
+/* ========= advantages ========= */
+.advantages {
+  padding-bottom: 60px;
+  &-list-text {
+    max-width: 450px;
+    @include font(14px, 24px);
+  }
+}
+.advantages-list {
+  &-antenna::before {
+    background-image: url(../images/advantages/antenna1.svg);
+  }
+  &-clock::before {
+    background-image: url(../images/advantages/clock1.svg);
+  }
+  &-diagram::before {
+    background-image: url(../images/advantages/diagram1.svg);
+  }
+  &-astronaut::before {
+    background-image: url(../images/advantages/astronaut1.svg);
+  }
+}
+.advantages-list-title {
+  margin-bottom: 10px;
+  text-align: center;
+
+  color: $title-text-color;
+  font-weight: $bold-font-weight;
+  @include font(14px, 16px);
+  text-transform: uppercase;
+
+  &::before {
+    display: block;
+    content: "";
+    max-width: 450px;
+    height: 120px;
+    background-color: $secondary-background-color;
+    border-radius: 4px;
+    margin-bottom: 30px;
+
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+//mobile
+
+@media screen and (min-width: 480px) {
+  .advantages-list-title {
+    &::before {
+      content: "";
+      max-width: 450px;
+      height: 120px;
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .advantages-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+// tablet
+@media screen and (min-width: 768px) {
+  .advantages {
+    &-list-text {
+      width: 354px;
+    }
+    .advantages-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .advantages-list-title {
+      text-align: start;
+      &::before {
+        content: "";
+        width: 354px;
+        height: 120px;
+      }
+    }
+  }
+}
+//desctop
+@media screen and (min-width: 1200px) {
+  .advantages {
+    padding-bottom: 0;
+
+    &-list-text {
+      width: 270px;
+    }
+    .advantages-list {
+      display: flex;
+      justify-content: space-between;
+    }
+    .advantages-list-title {
+      &::before {
+        content: "";
+        width: 270px;
+        height: 120px;
+      }
+    }
+  }
+}
